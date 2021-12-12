@@ -29,7 +29,7 @@ Add a New README.md
                 if (nameInput) {
                   return true;
                 } else {
-                  console.log('Please enter your name!');
+                  console.log('Please enter the title!');
                   return false;
                 }
               }
@@ -49,7 +49,7 @@ Add a New README.md
         },
         {
             type: 'checkbox',
-            name: 'tableofcontents',
+            name: 'tableOfContents',
             message: "Add a Table of Contents. (Check all that apply)",
             choices: ['Description', 'Installation', 'Usage', 'License', 'Contributing', 'Tests', 'Questions']
         },
@@ -115,14 +115,17 @@ Add a New README.md
 };
 
 //TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
+/* fs.writeFile('./dist/READ.md', fileREAD, err => {
+  if (err) {
+    console.log(err);
+    return;
+  }
+  console.log('README created! Check out READ.md in this directory to see it!');
 
-//TODO: Create a function to write README file
-promptUser().then(answers => console.log(answers));
 
 //TODO: Create a function to initialize app
-//function init() {}
+function init() {}
 
 // Function call to initialize app
-//init();
+promptUser().then(answers => console.log(answers));
 

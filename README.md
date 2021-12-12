@@ -43,7 +43,7 @@ THEN I am taken to the corresponding section of the README
 ```
 
 # INSTALLATION SETUP
-**MANDATORY REQUIREMENT FOR SUCCESSFUL APPLICATION: NODE.JS MUST BE INSTALLED!**
+**MANDATORY REQUIREMENT FOR SUCCESSFUL APPLICATION:**  **NODE.JS MUST BE INSTALLED!**
 
 1. Download all files from the repository.
 2. CD into the repository.
