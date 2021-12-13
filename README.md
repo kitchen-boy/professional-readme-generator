@@ -1,14 +1,14 @@
 #professional-README-generator
 # Table of Contents:
-* [Project Description](#Description)
-* [Task Completed](#Task-Completed)
-* [User Story](#User-Story)
-* [Acceptance Criteria](#Acceptance-Criteria)
-* [Installation](#Installation)
-* [Screenshots and Video Link of application](#Screenshot)
-* [Links](#Links)
-* [Credits](#Credits)
-* [License](#License)
+* [Project Description](#description)
+* [Task Completed](#task-completed)
+* [User Story](#user-story)
+* [Acceptance Criteria](#acceptance-criteria)
+* [Installation](#installation-setup)
+* [Screenshots and Video Link of application](#screenshots-and-video)
+* [Links](#links)
+* [Credits](#credits)
+* [License](#license)
 
 # DESCRIPTION
 Let's create a high-quality README for your application or any open source project on GitHub. We'll include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions—this last part increases the likelihood that other developers will contribute to the success of the project. 
@@ -60,8 +60,8 @@ node index.js
 [Walkthrough Video](https://drive.google.com/file/d/10h8JkUd-e5Qsp11bs9nl-gMYgXjlq9Y8/view)
 # LINKS
 [Link to the deployed website]()
-[Screenshot Link]()
-[Link to the code repository]() 
+[Screenshot Link](./Screen Shot 2021-12-12 at 21.17.47.png)
+[Link to the code repository](https://github.com/kitchen-boy/professional-readme-generator) 
 
 # CREDITS
 Kaye Chen-Boyce
