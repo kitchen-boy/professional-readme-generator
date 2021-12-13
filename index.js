@@ -1,17 +1,10 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const { file } = require('tmp');
-/* const fs = require('fs');
-const generateFile = require('./src/file-template');
+const fs = require('fs');
+const generateReadMe = require('./utils/generateMarkdown');
+const licenseText = require('./licenses.js')
+const badgeIcon = require('./badges.js')
 
-const fileREADME = generateFile(projectname);
-
-fs.writeFile('./README.md', fileREADME, err => {
-    if (err) throw err;
-
-    console.log(README complete! Checkout README.md to see the output!);
-});
- */
 
 //TODO: Create an array of questions for user input
 const promptUser = () => {
@@ -23,10 +16,10 @@ Add a New README.md
     return inquirer.prompt([    
         {
             type: 'input',
-            name: 'name',
+            name: 'projectTitle',
             message: 'What is the title of your project? (Required)',
-            validate: nameInput => {
-                if (nameInput) {
+            validate: projectTitleInput => {
+                if (projectTitleInput) {
                   return true;
                 } else {
                   console.log('Please enter the title!');
@@ -48,10 +41,30 @@ Add a New README.md
             }
         },
         {
+            type: 'confirm',
+            name: 'confirmTable',
+            message: 'Would you like to add a Table of Contents?',
+            default: true
+        },
+        {
             type: 'checkbox',
             name: 'tableOfContents',
             message: "Add a Table of Contents. (Check all that apply)",
-            choices: ['Description', 'Installation', 'Usage', 'License', 'Contributing', 'Tests', 'Questions']
+            when: ({confirmTable}) => {
+                if (confirmTable) {
+                    return true;
+                } else {
+                    return false;
+                }
+            },
+            choices: [
+                'Description', 
+                'Installation', 
+                'Usage', 
+                'Contributing', 
+                'Tests', 
+                'Questions',
+                'License']
         },
         {
             type: 'input',
@@ -63,17 +76,17 @@ Add a New README.md
             name: 'usage', 
             message: 'Provide instructions and examples for use.',
         },
-    
         {
             type: 'list',
             name: 'license',
             message: 'Choose an open source license for this project.',
             choices: [
-                'GPL General Public License',
                 'Apache License',
-                'ISC License',
-                'Mozilla Public License 2.0', 
-                'MIT License']
+                'GNU',
+                'ISC License', 
+                'MIT License',
+                'Mozilla Public License 2.0'
+            ]
         },
         {
             type: 'input',
@@ -115,17 +128,26 @@ Add a New README.md
 };
 
 //TODO: Create a function to write README file
-/* fs.writeFile('./dist/READ.md', fileREAD, err => {
-  if (err) {
-    console.log(err);
-    return;
-  }
-  console.log('README created! Check out READ.md in this directory to see it!');
-
+const writeFile = fileContent => {
+    return new Promise((resolve, reject) => {
+        fs.writeFile('.')
+    })
+}
 
 //TODO: Create a function to initialize app
-function init() {}
+//function init() {}
 
 // Function call to initialize app
-promptUser().then(answers => console.log(answers));
-
+promptUser()
+    .then(promptProject => {
+        return generateReadMe(promptProject);
+    })
+    .then(fileREADME => {
+        return fs.writeFile(fileREADME);
+    })
+    .then(writeFileResponse => {
+        console.log(writeFileResponse);
+    })
+    .catch(err => {
+        console.log(err);
+    });
