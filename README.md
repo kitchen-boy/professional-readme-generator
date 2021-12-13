@@ -57,7 +57,7 @@ node index.js
 ```
 
 # SCREENSHOTS AND VIDEO
-
+[Walkthrough Video](https://drive.google.com/file/d/10h8JkUd-e5Qsp11bs9nl-gMYgXjlq9Y8/view)
 # LINKS
 [Link to the deployed website]()
 [Screenshot Link]()

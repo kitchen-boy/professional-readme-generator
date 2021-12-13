@@ -41,6 +41,7 @@ function generateReadMe(answers) {
 
     # CONTRIBUTING
     ${answers.contributing} \n
+    // add contributor-covenant text???
 
     # TESTS
     ${answers.tests} \n
