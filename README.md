@@ -59,9 +59,8 @@ node index.js
 # SCREENSHOTS AND VIDEO
 [Walkthrough Video](https://drive.google.com/file/d/10h8JkUd-e5Qsp11bs9nl-gMYgXjlq9Y8/view)
 # LINKS
-* [Link to the deployed website]()
 * ![Screenshot](images/ScreenShot-2021-12-12.png)
-* [Link to the code repository](https://github.com/kitchen-boy/professional-readme-generator) 
+* Link to the code repository: (https://github.com/kitchen-boy/professional-readme-generator) 
 
 # CREDITS
 Kaye Chen-Boyce
